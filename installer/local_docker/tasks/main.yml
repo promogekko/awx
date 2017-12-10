@@ -164,7 +164,7 @@
     image: "{{ awx_web_docker_actual_image }}"
     user: root
     ports:
-      - "{{ host_port }}:8052"
+      - "8080:8052"
     links: "{{ awx_web_container_links|list }}"
     hostname: awxweb
     dns_search_domains: "{{ awx_container_search_domains.split(',') if awx_container_search_domains is defined else omit }}"
